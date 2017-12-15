@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SceneStart.cpp" />
+    <ClCompile Include="SceneGame.cpp" />
+    <ClCompile Include="DXLfancs.cpp" />
+    <ClCompile Include="SceneStageSelect.cpp" />
+    <ClCompile Include="TouchPoint.cpp">
+      <Filter>シーン内部</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObj.cpp">
+      <Filter>シーン内部</Filter>
+    </ClCompile>
+    <ClCompile Include="Screen.cpp">
+      <Filter>シーン内部</Filter>
+    </ClCompile>
+    <ClCompile Include="Mouse.cpp">
+      <Filter>inkput</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneStart.h" />
+    <ClInclude Include="SceneGame.h" />
+    <ClInclude Include="DXLfancs.h" />
+    <ClInclude Include="SceneStageSelect.h" />
+    <ClInclude Include="TouchPoint.h">
+      <Filter>シーン内部</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObj.h">
+      <Filter>シーン内部</Filter>
+    </ClInclude>
+    <ClInclude Include="Screen.h">
+      <Filter>シーン内部</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse.h">
+      <Filter>inkput</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="シーン内部">
+      <UniqueIdentifier>{f62855ab-b71e-4b8d-bd7d-9e1e76d23ac7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inkput">
+      <UniqueIdentifier>{32063231-6364-4756-ae04-54dcbcbc059b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
