@@ -3,10 +3,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="SceneStart.cpp" />
-    <ClCompile Include="SceneGame.cpp" />
     <ClCompile Include="DXLfancs.cpp" />
-    <ClCompile Include="SceneStageSelect.cpp" />
     <ClCompile Include="TouchPoint.cpp">
       <Filter>シーン内部</Filter>
     </ClCompile>
@@ -18,6 +15,15 @@
     </ClCompile>
     <ClCompile Include="Mouse.cpp">
       <Filter>inkput</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGame.cpp">
+      <Filter>ここいじって</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneStageSelect.cpp">
+      <Filter>ここいじって</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneStart.cpp">
+      <Filter>ここいじって</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +51,9 @@
     </Filter>
     <Filter Include="inkput">
       <UniqueIdentifier>{32063231-6364-4756-ae04-54dcbcbc059b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ここいじって">
+      <UniqueIdentifier>{0c0129ac-2f3f-47bc-9ebc-1def243c409d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

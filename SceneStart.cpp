@@ -3,12 +3,14 @@
 
 
 SceneStart::SceneStart(){
-	setNext( END );
+	setNext( nullptr );
 }
 
 SceneStart::~SceneStart( ) {
 
 }
+
+//\------ いじるのここから下 (   void Scene,,,::run( ) のなか  ) ---------//
 
 void SceneStart::run( ) {
 
@@ -16,7 +18,7 @@ void SceneStart::run( ) {
 	Buttan_End->setPos(10, 10);
 	Mouse* mousePtr( new Mouse() );
 
-	while ( true ) {
+	while ( true ) {//  ---------　これメインループ　－－－－・・
 		mousePtr->update( );
 
 
@@ -26,7 +28,7 @@ void SceneStart::run( ) {
 			break;
 		}
 
-		if ( FrameEnd( ) ) {
+		if ( FrameEnd( ) ) {//　これは定型文　みたいなの気にしないでおｋ。
 			break;
 		}
 	}

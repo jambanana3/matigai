@@ -2,8 +2,8 @@
 
 
 
-SceneStageSelect::SceneStageSelect()
-{
+SceneStageSelect::SceneStageSelect(){
+	setNext(nullptr);
 }
 
 
@@ -11,12 +11,14 @@ SceneStageSelect::~SceneStageSelect()
 {
 }
 
+//\------ いじるのここから下 (   void Scene,,,::run( ) のなか  ) ---------//
+
 void SceneStageSelect::run() {
 
-	while (true) {
+	while (true) {//  ---------　これメインループ　－－－－・・
 
 
-		if (FrameEnd()) {
+		if (FrameEnd()) {//　これは定型文　みたいなの気にしないでおｋ。
 			break;
 		}
 	}

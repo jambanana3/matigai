@@ -12,14 +12,14 @@ enum NextScene {
 
 class Scene {
 public:
-	Scene( );
-	virtual ~Scene( );
+	Scene();
+	virtual ~Scene();
 public:
-	virtual void run( ) { return; };
-	virtual NextScene getNext( ) { return _next; };
+	virtual void run();
+	Scene* getNext( );
 protected:
-	void setNext( NextScene next ) { _next = next; };
+	void setNext(Scene* scenePtr);
 private:
-	NextScene _next;
+	Scene* _next;
 };
 

@@ -10,15 +10,18 @@ int WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int ) {
 
 	Scene* scene( new SceneStart() );
 	do {
+
 		scene->run( );
+		Scene* next = scene->getNext( );
+		delete scene;
+		scene = next;
 
-		if ( scene->getNext( ) == START ){ 
-			delete scene;
-			scene = (new SceneStart() );
-		}
+	} while (scene != nullptr );
 
-	} while (scene->getNext() != END);
 	delete scene;
 
+
+
 	DxLib_End();
+
 }
