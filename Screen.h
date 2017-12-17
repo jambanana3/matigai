@@ -6,11 +6,13 @@
 
 class Screen : public GameObj {
 public:
-	Screen( int hundll, int x, int y, int scr_width, int scr_height, int x_end, int speed = 3 );
+	Screen( int hundll, int x, int y, int scr_width, int scr_height, int x_end, int speed = 1 );//グラフィックハンドル、かいしｘ、かいしｙ、スクリーンサイズｘ、ｙ、画像ｘさいず、speed。
 	virtual ~Screen( );
 public:
 	void draw( );
 	void update( );
+
+	bool touch( Mouse* mouse, bool botan );
 private:
 	int _hundll;
 	std::list< TouchPoint* > _touch_point_list;

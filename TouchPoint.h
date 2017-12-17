@@ -12,6 +12,7 @@ public:
 	void draw( );
 public:
 	bool touch( Mouse* mouse, bool klic );
+	bool touch( int x, int y, bool klic );
 	void setPos(int x, int y);
 private:
 	int _x;

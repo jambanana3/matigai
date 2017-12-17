@@ -49,4 +49,20 @@ bool TouchPoint::touch( Mouse* mousePtr, bool klic ) {
 	}
 	return false;
 }
+bool TouchPoint::touch( int x, int y, bool klic ) {
+	if( _if_box ) {
+		if ( klic ) {
+			if (_x < x && x < _x + _x_size && _y < y && y < _y + _y_size) {
+				return true;
+			}
+		}
+	} else {
+		if ( klic ) {
+			if ( sqrt( ( x - _x ) * ( x - _x ) + ( y - _y ) * ( y - _y ) ) < _r_size ) {
+				return true;
+			}
+		}
+	}
+	return false;
+}
 

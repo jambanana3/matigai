@@ -161,6 +161,7 @@
     <ClCompile Include="SceneStageSelect.cpp" />
     <ClCompile Include="SceneStart.cpp" />
     <ClCompile Include="Screen.cpp" />
+    <ClCompile Include="ScreenItem.cpp" />
     <ClCompile Include="TouchPoint.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -172,6 +173,7 @@
     <ClInclude Include="SceneStageSelect.h" />
     <ClInclude Include="SceneStart.h" />
     <ClInclude Include="Screen.h" />
+    <ClInclude Include="ScreenItem.h" />
     <ClInclude Include="TouchPoint.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -25,6 +25,9 @@
     <ClCompile Include="SceneStart.cpp">
       <Filter>ここいじって</Filter>
     </ClCompile>
+    <ClCompile Include="ScreenItem.cpp">
+      <Filter>シーン内部</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene.h" />
@@ -43,6 +46,9 @@
     </ClInclude>
     <ClInclude Include="Mouse.h">
       <Filter>inkput</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenItem.h">
+      <Filter>シーン内部</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
