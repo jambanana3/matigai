@@ -28,6 +28,7 @@
     <ClCompile Include="ScreenItem.cpp">
       <Filter>シーン内部</Filter>
     </ClCompile>
+    <ClCompile Include="SceneTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene.h" />
@@ -50,6 +51,7 @@
     <ClInclude Include="ScreenItem.h">
       <Filter>シーン内部</Filter>
     </ClInclude>
+    <ClInclude Include="SceneTest.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="シーン内部">
