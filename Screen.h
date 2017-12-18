@@ -13,6 +13,9 @@ public:
 	void update( );
 
 	bool touch( Mouse* mouse, bool botan );
+	bool touchScreen( Mouse* mouse, bool botan );
+
+	void addTouchPoint( TouchPoint* touchPtr, int pos_x, int pos_y );
 private:
 	int _hundll;
 	std::list< TouchPoint* > _touch_point_list;

@@ -24,21 +24,6 @@ Screen::~Screen( ) {
 	}
 }
 
-bool Screen::touch( Mouse* mouse, bool botan ){
-	if( botan ) {
-		std::list<TouchPoint*>::iterator ite = _touch_point_list.begin( );
-		int length = _touch_point_list.max_size( );
-		for( int i = 0; i < length; i++ ) {
-			if( (*ite)->touch( mouse->_x + _time, mouse->_y, botan ) ) {
-				_touch_point_list.remove( *ite );
-				delete ( *ite );
-				return true;
-			}
-			ite++;
-		}
-	}
-	return false;
-}
 
 void Screen::draw( ){
 	if( _time > _x_size ) {
@@ -57,4 +42,33 @@ void Screen::update( ){
 	if( _time > _x_size ) {
 		_time = 0;
 	}
+}
+
+bool Screen::touch( Mouse* mouse, bool botan ){
+	if( botan && touchScreen( mouse, botan ) ) {
+		std::list<TouchPoint*>::iterator ite = _touch_point_list.begin( );
+		int length = _touch_point_list.size( );
+		for( int i = 0; i < length; i++ ) {
+			if( (*ite)->touch( mouse->_x + _time           - _x , mouse->_y - _y, botan ) ||
+				(*ite)->touch( mouse->_x + _time + _x_size - _x , mouse->_y - _y, botan ) ||
+				(*ite)->touch( mouse->_x + _time - _x_size - _x , mouse->_y - _y, botan ) ) {
+				delete ( *ite );
+				_touch_point_list.remove( *ite );
+				return true;
+			}
+			ite++;
+		}
+	}
+	return false;
+}
+bool Screen::touchScreen( Mouse* mouse, bool botan ) {
+	if( mouse->_x < _x || _x + _scr_width < mouse->_x || mouse->_y < _y || _y + _scr_height < mouse->_y ) {
+		return false;
+	}
+	return true;
+}
+void Screen::addTouchPoint( TouchPoint* touchPtr, int pos_x, int pos_y ) {
+	touchPtr->setPos( pos_x, pos_y );
+	_touch_point_list.push_back( touchPtr );
+	_RPT0( _CRT_WARN, "タッチＰ追加。" );
 }

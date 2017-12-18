@@ -27,3 +27,12 @@ int WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int ) {
 	DxLib_End();
 
 }
+
+/*  デバック便利
+
+_RPT0(int rptno, char const* msg)
+_RPTN(int rptno, char const* msg, ...)
+
+_RPTN(_CRT_WARN, "deleting %Xh\n", org.m_Data[i]);;
+
+*/

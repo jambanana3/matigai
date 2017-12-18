@@ -20,14 +20,21 @@ void SceneTest::run( ) {
 	Mouse* mousePtr( new Mouse() );
 	Screen* screen( new Screen( scr_g, 50, 150, 250, 100, 500 ) );
 
+	screen->addTouchPoint( new TouchPoint( 20 ), 20, 20 );
+
 	while ( true ) {//  ---------@‚±‚êƒƒCƒ“ƒ‹[ƒv@||||EE
 		mousePtr->update( );
 
 
-		screen->draw( );
+
+		//DrawRectGraph( 50, 300, 0, 300, 500, 100, scr_g, true, false );
 		screen->update( );
-		DrawRectGraph( 50, 300, 0, 300, 500, 100, scr_g, true, false );
-		
+		screen->draw( );
+		if( screen->touch( mousePtr, mousePtr->left_in() ) ) {
+			break;
+		}
+
+
 
 		Buttan_End->draw( );
 		if (Buttan_End->touch( mousePtr, mousePtr->left_in( ) )) {
