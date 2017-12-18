@@ -3,6 +3,7 @@
 #include "SceneStart.h"
 #include "SceneTest.h"
 
+
 int WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int ) {
 	ChangeWindowMode( true );
 //	SetGraphMode();

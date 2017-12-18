@@ -28,7 +28,9 @@
     <ClCompile Include="ScreenItem.cpp">
       <Filter>シーン内部</Filter>
     </ClCompile>
-    <ClCompile Include="SceneTest.cpp" />
+    <ClCompile Include="SceneTest.cpp">
+      <Filter>ここいじって</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene.h" />
