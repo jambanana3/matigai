@@ -10,6 +10,7 @@ public:
 public:
 	void update( );
 	void draw( );
+	void drawDiff(int x, int y);
 public:
 	bool touch( Mouse* mouse, bool klic );
 	bool touch( int x, int y, bool klic );

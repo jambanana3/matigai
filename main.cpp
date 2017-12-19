@@ -6,7 +6,7 @@
 
 int WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int ) {
 	ChangeWindowMode( true );
-//	SetGraphMode();
+	SetGraphMode(800, 800, 32);
 	DxLib_Init();
 	SetDrawScreen( DX_SCREEN_BACK );
 

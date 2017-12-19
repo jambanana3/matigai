@@ -15,7 +15,7 @@ SceneStart::~SceneStart( ) {
 
 void SceneStart::run( ) {
 
-	int scr_g = LoadGraph( "iwa.png" );
+	int scr_g = LoadGraph( "Ahaikei.png" );
 
 	TouchPoint* Buttan_End(new TouchPoint( 90, 90 ) );
 	Buttan_End->setPos(10, 10);

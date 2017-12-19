@@ -36,6 +36,58 @@ void Screen::draw( ){
 		DrawRectGraph( _x + _x_size - _time, _y,     0, _y_add,( _time + _scr_width - _x_size ), _scr_height, _hundll, true, false );
 	}
 }
+/*
+void Screen::drawAll() {
+	int SCR_G = MakeScreen( _scr_width, _scr_height );
+	SetDrawScreen( SCR_G );//-----------//
+
+	if (_time < _x_size - _scr_width) {
+		DrawRectGraph( 0, 0, _time, _y_add, _scr_width, _scr_height, _hundll, true, false);
+	}
+	else {
+		DrawRectGraph(                   0,     0, _time, _y_add,                _x_size - _time, _scr_height, _hundll, true, false);
+		DrawRectGraph( 0 + _x_size - _time,     0,     0, _y_add, (_time + _scr_width - _x_size), _scr_height, _hundll, true, false);
+	}
+
+	std::list<TouchPoint*>::iterator ite = _touch_point_list.begin();
+	int length = _touch_point_list.size();
+	for (int i = 0; i < length; i++) {
+		(*ite)->drawDiff( -_time, 0 );
+		(*ite)->drawDiff( -_time + _x_size, 0);
+		(*ite)->drawDiff( -_time - _x_size, 0);
+		ite++;
+	}
+
+	SetDrawScreen( DX_SCREEN_BACK );
+
+	DrawGraph( _x, _y, SCR_G, true );
+	DeleteGraph(SCR_G);
+}*/
+void Screen::drawAll() {
+	int SCR_G = MakeScreen(_x_size, _scr_height);
+	SetDrawScreen(SCR_G);//-----------//
+
+	DrawRectGraph(0, 0, 0, _y_add, _x_size, _scr_height, _hundll, true, false);
+
+	std::list<TouchPoint*>::iterator ite = _touch_point_list.begin();
+	int length = _touch_point_list.size();
+	for (int i = 0; i < length; i++) {
+		(*ite)->draw( );
+		ite++;
+	}
+
+	SetDrawScreen(DX_SCREEN_BACK);
+
+	if (_time < _x_size - _scr_width) {
+		DrawRectGraph(_x, _y, _time, _y_add, _scr_width, _scr_height, SCR_G, true, false);
+	}
+	else {
+		DrawRectGraph(_x, _y, _time, _y_add, _x_size - _time, _scr_height, SCR_G, true, false);
+		DrawRectGraph(_x + _x_size - _time, _y, 0, _y_add, (_time + _scr_width - _x_size), _scr_height, SCR_G, true, false);
+	}
+	DeleteGraph(SCR_G);
+}
+
 void Screen::update( ){
 
 	_time += _speed;

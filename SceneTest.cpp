@@ -13,12 +13,13 @@ SceneTest::~SceneTest( ) {
 
 void SceneTest::run( ) {
 	
-	int scr_g = LoadGraph( "iwa.png" );
+	int scr_g = LoadGraph( "Ahaikei.png" );
+	bool aaaa = 0;
 
 	TouchPoint* Buttan_End(new TouchPoint( 90, 90 ) );
 	Buttan_End->setPos(300, 10);
 	Mouse* mousePtr( new Mouse() );
-	Screen* screen( new Screen( scr_g, 50, 150, 250, 100, 500 ) );
+	Screen* screen( new Screen( scr_g, 50, 150, 500, 300, 900 ) );
 
 	screen->addTouchPoint( new TouchPoint( 20 ), 20, 20 );
 
@@ -29,16 +30,16 @@ void SceneTest::run( ) {
 
 		//DrawRectGraph( 50, 300, 0, 300, 500, 100, scr_g, true, false );
 		screen->update( );
-		screen->draw( );
-		if( screen->touch( mousePtr, mousePtr->left_in() ) ) {
+		screen->drawAll( );
+		if( screen->touch( mousePtr, mousePtr->left_in( ) ) ) {
 			break;
 		}
 
 
 
 		Buttan_End->draw( );
-		if (Buttan_End->touch( mousePtr, mousePtr->left_in( ) )) {
-			setNext( new SceneStart() );
+		if (Buttan_End->touch( mousePtr, mousePtr->left_in( ) ) ) {
+			setNext( new SceneStart( ) );
 			break;
 		}
 
