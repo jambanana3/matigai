@@ -45,7 +45,8 @@ void TouchPoint::setPos( int x, int y ) {
 	_x = x;
 	_y = y;
 }
-void TouchPoint::setScore( int score ) {
+void TouchPoint::setScore( DataScore* score_data, int score ) {
+	_score_data = score_data;
 	_score = score;
 }
 
@@ -87,8 +88,19 @@ bool TouchPoint::touch( int x, int y, bool klic ) {
 	return false;
 }
 void TouchPoint::touchAction( ) {
+	if( _if_score ) {
+		_score_data->_score += _score;
+		_score_data = nullptr;
+		_score = 0;
+		_if_score = false;
+	}
 
 
 
+
+}
+
+bool TouchPoint::ifBox( ) {
+	return _if_box;
 }
 

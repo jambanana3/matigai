@@ -1,6 +1,7 @@
 #pragma once
 #include "GameObj.h"
 #include "Mouse.h"
+#include "DataScore.h"
 
 class TouchPoint : public GameObj {
 public:
@@ -15,7 +16,9 @@ public:
 	bool touch( Mouse* mouse, bool klic );
 	bool touch( int x, int y, bool klic );
 	void setPos(int x, int y);
-	void setScore( int Score );
+	void setScore( DataScore* score_data,int score );
+
+	bool ifBox( );
 
 private:
 	void initThis( );
@@ -30,6 +33,7 @@ private:
 	bool _if_box;
 	bool _if_score;
 
+	DataScore* _score_data;
 	int _score;
 };
 
