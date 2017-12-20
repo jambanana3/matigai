@@ -18,9 +18,10 @@ void SceneOption::run( ) {
 	while (true) {//  ---------　これメインループ　－－－－・・
 
 
+
+
 		if (FrameEnd()) {//　これは定型文　みたいなの気にしないでおｋ。
 			break;
 		}
 	}
-
 }

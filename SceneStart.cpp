@@ -29,7 +29,7 @@ void SceneStart::run( ) {
 		screen->draw( );
 		screen->update( );
 		DrawRectGraph( 50, 300, 0, 300, 500, 100, scr_g, true, false );
-		
+
 
 		Buttan_End->draw( );
 		if (Buttan_End->touch( mousePtr, mousePtr->left_in( ) )) {
