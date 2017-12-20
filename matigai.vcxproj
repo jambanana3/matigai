@@ -152,6 +152,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Data.cpp" />
+    <ClCompile Include="DataScore.cpp" />
     <ClCompile Include="DXLfancs.cpp" />
     <ClCompile Include="GameObj.cpp" />
     <ClCompile Include="main.cpp" />
@@ -171,6 +173,8 @@
     <ClCompile Include="TouchPoint.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Data.h" />
+    <ClInclude Include="DataScore.h" />
     <ClInclude Include="DXLfancs.h" />
     <ClInclude Include="GameObj.h" />
     <ClInclude Include="Mouse.h" />

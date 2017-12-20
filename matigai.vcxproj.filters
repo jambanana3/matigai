@@ -46,6 +46,10 @@
     <ClCompile Include="SceneGameYu.cpp">
       <Filter>ここいじって</Filter>
     </ClCompile>
+    <ClCompile Include="Data.cpp">
+      <Filter>データ関連</Filter>
+    </ClCompile>
+    <ClCompile Include="DataScore.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene.h" />
@@ -74,6 +78,10 @@
     <ClInclude Include="SceneGameJ.h" />
     <ClInclude Include="SceneGameMo.h" />
     <ClInclude Include="SceneGameYu.h" />
+    <ClInclude Include="Data.h">
+      <Filter>データ関連</Filter>
+    </ClInclude>
+    <ClInclude Include="DataScore.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="シーン内部">
@@ -84,6 +92,9 @@
     </Filter>
     <Filter Include="ここいじって">
       <UniqueIdentifier>{0c0129ac-2f3f-47bc-9ebc-1def243c409d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="データ関連">
+      <UniqueIdentifier>{326dd493-fc39-4acc-9bfd-75bd588a3a67}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
