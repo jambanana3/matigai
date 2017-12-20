@@ -15,24 +15,41 @@ SceneStart::~SceneStart( ) {
 
 void SceneStart::run( ) {
 
-	int scr_g = LoadGraph( "Ahaikei.png" );
+	int haikei = LoadGraph( "gazou/matigai.png" );
+	int start = LoadGraph( "gazou/スタート.png" );
+	int end = LoadGraph( "gazou/おわり.png" );
 
 	TouchPoint* Buttan_End(new TouchPoint( 90, 90 ) );
 	Buttan_End->setPos(10, 10);
+	TouchPoint* Buttan_Start(new TouchPoint( 400, 100 ) );
+	Buttan_Start->setPos(200, 500);
+	TouchPoint* Buttan_Ending(new TouchPoint( 400, 100 ) );
+	Buttan_Ending->setPos(200, 650);
+
 	Mouse* mousePtr( new Mouse() );
-	Screen* screen( new Screen( scr_g, 50, 150, 250, 100, 500 ) );
+
 
 	while ( true ) {//  ---------　これメインループ　－－－－・・
 		mousePtr->update( );
 
+		DrawGraph( 0, 0, haikei, true );
+		DrawGraph( 200, 500, start, true );
+		DrawGraph( 200, 650, end, true );
 
-		screen->draw( );
-		screen->update( );
-		DrawRectGraph( 50, 300, 0, 300, 500, 100, scr_g, true, false );
 
 
 		Buttan_End->draw( );
+
+		
 		if (Buttan_End->touch( mousePtr, mousePtr->left_in( ) )) {
+			break;
+		}
+
+		if (Buttan_Start->touch(mousePtr, mousePtr->left_in( ) ) ) {
+			break;
+		}
+
+		if (Buttan_Ending->touch(mousePtr, mousePtr->left_in( ) ) ) {
 			break;
 		}
 
