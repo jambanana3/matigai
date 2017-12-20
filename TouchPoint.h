@@ -19,6 +19,7 @@ public:
 
 private:
 	void initThis( );
+	void touchAction( );
 private:
 	int _x;
 	int _y;

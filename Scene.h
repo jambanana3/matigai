@@ -1,5 +1,6 @@
 #pragma once
 #include "DXLfancs.h"
+#include "DataScore.h"
 
 enum NextScene {
 	END,
@@ -17,9 +18,14 @@ public:
 public:
 	virtual void run();
 	Scene* getNext( );
+	void Scene::setScore( );
 protected:
 	void setNext(Scene* scenePtr);
+	void initThis( );
+
 private:
 	Scene* _next;
+	DataScore* _score;
+
 };
 

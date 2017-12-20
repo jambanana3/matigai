@@ -19,7 +19,7 @@ TouchPoint::~TouchPoint( ) {
 }
 void TouchPoint::initThis( ) {
 	_score = 0;
-	_if_score = 0;
+	_if_score = false;
 }
 
 void TouchPoint::update( ) {
@@ -54,12 +54,14 @@ bool TouchPoint::touch( Mouse* mousePtr, bool klic ) {
 	if( _if_box ) {
 		if ( klic ) {
 			if (_x < mousePtr->_x && mousePtr->_x < _x + _x_size && _y < mousePtr->_y && mousePtr->_y < _y + _y_size) {
+				touchAction( );
 				return true;
 			}
 		}
 	} else {
 		if ( klic ) {
 			if ( ( (mousePtr->_x - _x)*(mousePtr->_x - _x)+(mousePtr->_y - _y)*(mousePtr->_y - _y) ) < _r_size * _r_size ) {
+				touchAction( );
 				return true;
 			}
 		}
@@ -70,16 +72,23 @@ bool TouchPoint::touch( int x, int y, bool klic ) {
 	if( _if_box ) {
 		if ( klic ) {
 			if (_x < x && x < _x + _x_size && _y < y && y < _y + _y_size) {
+				touchAction( );
 				return true;
 			}
 		}
 	} else {
 		if ( klic ) {
 			if (  ( x - _x ) * ( x - _x ) + ( y - _y ) * ( y - _y ) < _r_size * _r_size) {
+				touchAction( );
 				return true;
 			}
 		}
 	}
 	return false;
+}
+void TouchPoint::touchAction( ) {
+
+
+
 }
 

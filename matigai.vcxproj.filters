@@ -49,7 +49,9 @@
     <ClCompile Include="Data.cpp">
       <Filter>データ関連</Filter>
     </ClCompile>
-    <ClCompile Include="DataScore.cpp" />
+    <ClCompile Include="DataScore.cpp">
+      <Filter>データ関連</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene.h" />
@@ -81,7 +83,9 @@
     <ClInclude Include="Data.h">
       <Filter>データ関連</Filter>
     </ClInclude>
-    <ClInclude Include="DataScore.h" />
+    <ClInclude Include="DataScore.h">
+      <Filter>データ関連</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="シーン内部">

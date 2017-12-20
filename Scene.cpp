@@ -16,9 +16,16 @@ void Scene::setNext(Scene* scenePtr) {
 Scene* Scene::getNext( ) {
 	return _next;
 }
+void Scene::setScore( ) {
+	
+}
 
 void Scene::run( ) {
 
-	_next = (new SceneStart( ));
+	_next = ( new SceneStart( ) );
 
+}
+
+void Scene::initThis( ){
+	setNext( nullptr );
 }
