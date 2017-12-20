@@ -18,7 +18,7 @@ void SceneTest::run( ) {
 
 	TouchPoint* Buttan_End(new TouchPoint( 90, 90 ) );
 	Buttan_End->setPos(300, 10);
-	Mouse* mousePtr( new Mouse() );
+	Mouse* mousePtr( new Mouse( ) );
 	Screen* screen( new Screen( scr_g, 50, 150, 500, 300, 900 ) );
 
 	screen->addTouchPoint( new TouchPoint( 20 ), 20, 20 );

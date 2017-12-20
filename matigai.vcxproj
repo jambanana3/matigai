@@ -158,9 +158,11 @@
     <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneGame.cpp" />
+    <ClCompile Include="SceneOption.cpp" />
     <ClCompile Include="SceneStageSelect.cpp" />
     <ClCompile Include="SceneStart.cpp" />
     <ClCompile Include="SceneTest.cpp" />
+    <ClCompile Include="SceneTutorial.cpp" />
     <ClCompile Include="Screen.cpp" />
     <ClCompile Include="ScreenItem.cpp" />
     <ClCompile Include="TouchPoint.cpp" />
@@ -171,9 +173,11 @@
     <ClInclude Include="Mouse.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneGame.h" />
+    <ClInclude Include="SceneOption.h" />
     <ClInclude Include="SceneStageSelect.h" />
     <ClInclude Include="SceneStart.h" />
     <ClInclude Include="SceneTest.h" />
+    <ClInclude Include="SceneTutorial.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="ScreenItem.h" />
     <ClInclude Include="TouchPoint.h" />

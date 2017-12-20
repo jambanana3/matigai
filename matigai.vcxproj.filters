@@ -31,6 +31,10 @@
     <ClCompile Include="SceneTest.cpp">
       <Filter>ここいじって</Filter>
     </ClCompile>
+    <ClCompile Include="SceneTutorial.cpp">
+      <Filter>ここいじって</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneOption.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene.h" />
@@ -54,6 +58,8 @@
       <Filter>シーン内部</Filter>
     </ClInclude>
     <ClInclude Include="SceneTest.h" />
+    <ClInclude Include="SceneTutorial.h" />
+    <ClInclude Include="SceneOption.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="シーン内部">
