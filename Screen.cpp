@@ -17,10 +17,17 @@ _speed( speed ) {
 
 Screen::~Screen( ) {
 	std::list<TouchPoint*>::iterator ite = _touch_point_list.begin( );
-	int length = _touch_point_list.max_size( );
+	int length = _touch_point_list.size( );
 	for( int i = 0; i < length; i++ ) {
 		delete (*ite);
 		ite++;
+	}
+
+	std::list<ScreenItem*>::iterator ite2 = _items.begin();
+	int length2 = _items.size( );
+	for (int i = 0; i < length2; i++) {
+		delete (*ite2);
+		ite2++;
 	}
 }
 
@@ -87,6 +94,30 @@ void Screen::drawAll() {
 	}
 	DeleteGraph(SCR_G);
 }
+void Screen::drawAndItem() {
+	int SCR_G = MakeScreen(_x_size, _scr_height);
+	SetDrawScreen(SCR_G);//-----------//
+
+	DrawRectGraph(0, 0, 0, _y_add, _x_size, _scr_height, _hundll, true, false);
+
+	std::list<ScreenItem*>::iterator ite = _items.begin();
+	int length = _touch_point_list.size( );
+	for (int i = 0; i < length; i++) {
+		(*ite)->draw( );
+		ite++;
+	}
+
+	SetDrawScreen(DX_SCREEN_BACK);
+
+	if (_time < _x_size - _scr_width) {
+		DrawRectGraph(_x, _y, _time, _y_add, _scr_width, _scr_height, SCR_G, true, false);
+	}
+	else {
+		DrawRectGraph(_x, _y, _time, _y_add, _x_size - _time, _scr_height, SCR_G, true, false);
+		DrawRectGraph(_x + _x_size - _time, _y, 0, _y_add, (_time + _scr_width - _x_size), _scr_height, SCR_G, true, false);
+	}
+	DeleteGraph(SCR_G);
+}
 
 void Screen::update( ){
 
@@ -123,4 +154,8 @@ void Screen::addTouchPoint( TouchPoint* touchPtr, int pos_x, int pos_y ) {
 	touchPtr->setPos( pos_x, pos_y );
 	_touch_point_list.push_back( touchPtr );
 	_RPT0( _CRT_WARN, "タッチＰ追加。\n" );
+}
+void Screen::addScreenItem(ScreenItem* item, int x, int y ) {
+	item->setPos(x, y);
+	_items.push_back(item);
 }

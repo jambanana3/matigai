@@ -2,7 +2,7 @@
 #include "GameObj.h"
 class ScreenItem : public GameObj {
 public:
-	ScreenItem( int hundll, int center_x, int center_y, int size_x, int size_y  );
+	ScreenItem( int hundll, int size_x, int size_y  );
 	virtual ~ScreenItem( );
 public:
 	void update( );

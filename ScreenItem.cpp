@@ -2,9 +2,7 @@
 #include "DxLib.h"
 
 
-ScreenItem::ScreenItem( int hundll, int center_x, int center_y, int x_size, int y_size ):
-_x( center_x ),
-_y( center_y ),
+ScreenItem::ScreenItem( int hundll, int x_size, int y_size ):
 _x_size( x_size ),
 _y_size( y_size ),
 _hundll( hundll ) {
