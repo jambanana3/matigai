@@ -40,6 +40,12 @@
     <ClCompile Include="SceneGameJ.cpp">
       <Filter>ここいじって</Filter>
     </ClCompile>
+    <ClCompile Include="SceneGameMo.cpp">
+      <Filter>ここいじって</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGameYu.cpp">
+      <Filter>ここいじって</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene.h" />
@@ -66,6 +72,8 @@
     <ClInclude Include="SceneTutorial.h" />
     <ClInclude Include="SceneOption.h" />
     <ClInclude Include="SceneGameJ.h" />
+    <ClInclude Include="SceneGameMo.h" />
+    <ClInclude Include="SceneGameYu.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="シーン内部">

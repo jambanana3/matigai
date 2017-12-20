@@ -11,7 +11,7 @@ SceneTutorial::~SceneTutorial( ) {
 }
 
 //\------ いじるのここから下 (   void Scene,,,::run( ) のなか  ) ---------//
-\
+
 void SceneTutorial::run( ) {
 
 	while (true) {//  ---------　これメインループ　－－－－・・

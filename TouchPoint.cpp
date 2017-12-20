@@ -6,14 +6,20 @@
 TouchPoint::TouchPoint(int x_size, int y_size) :
 _x_size( x_size ),_y_size( y_size ){
 	_if_box = true;
+	initThis();
 }
 TouchPoint::TouchPoint(int r) :
 _r_size( r ) {
 	_if_box = false;
+	initThis();
 }
 
 TouchPoint::~TouchPoint( ) {
 
+}
+void TouchPoint::initThis( ) {
+	_score = 0;
+	_if_score = 0;
 }
 
 void TouchPoint::update( ) {
@@ -35,10 +41,14 @@ void TouchPoint::drawDiff(int x, int y) {
 	}
 }
 
-void TouchPoint::setPos( int x, int y ){ 
+void TouchPoint::setPos( int x, int y ) { 
 	_x = x;
 	_y = y;
 }
+void TouchPoint::setScore( int score ) {
+	_score = score;
+}
+
 
 bool TouchPoint::touch( Mouse* mousePtr, bool klic ) {
 	if( _if_box ) {
