@@ -70,7 +70,7 @@ void Screen::drawAll() {
 	DrawRectGraph(0, 0, 0, _y_add, _x_size, _scr_height, _hundll, true, false);
 
 	std::list<TouchPoint*>::iterator ite = _touch_point_list.begin();
-	int length = _touch_point_list.size();
+	int length = _touch_point_list.size( );
 	for (int i = 0; i < length; i++) {
 		(*ite)->draw( );
 		ite++;
@@ -122,5 +122,5 @@ bool Screen::touchScreen( Mouse* mouse, bool botan ) {
 void Screen::addTouchPoint( TouchPoint* touchPtr, int pos_x, int pos_y ) {
 	touchPtr->setPos( pos_x, pos_y );
 	_touch_point_list.push_back( touchPtr );
-	_RPT0( _CRT_WARN, "タッチＰ追加。" );
+	_RPT0( _CRT_WARN, "タッチＰ追加。\n" );
 }
