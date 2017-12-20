@@ -23,6 +23,7 @@ public:
 	void addScreenItem( ScreenItem* item, int x, int y );
 private:
 	int _hundll;
+	int _peke_g;
 	std::list< TouchPoint* > _touch_point_list;
 	std::list< ScreenItem* > _items;
 	int _x;

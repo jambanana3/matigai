@@ -13,22 +13,24 @@ _x_size( x_size ),
 _speed( speed ) {
 	_time = 0;
 	_y_add = 0;
+	_peke_g = LoadGraph( "gazo/64peke.png" );
 }
 
 Screen::~Screen( ) {
 	std::list<TouchPoint*>::iterator ite = _touch_point_list.begin( );
-	int length = _touch_point_list.size( );
+	int length = (int)_touch_point_list.size( );
 	for( int i = 0; i < length; i++ ) {
 		delete (*ite);
 		ite++;
 	}
 
 	std::list<ScreenItem*>::iterator ite2 = _items.begin();
-	int length2 = _items.size( );
+	int length2 = (int)_items.size( );
 	for (int i = 0; i < length2; i++) {
 		delete (*ite2);
 		ite2++;
 	}
+	DeleteGraph( _peke_g );
 }
 
 
@@ -101,9 +103,9 @@ void Screen::drawAndItem() {
 	DrawRectGraph(0, 0, 0, _y_add, _x_size, _scr_height, _hundll, true, false);
 
 	std::list<ScreenItem*>::iterator ite = _items.begin();
-	int length = _touch_point_list.size( );
+	int length = _items.size( );//  <-----
 	for (int i = 0; i < length; i++) {
-		(*ite)->draw( );
+		(*ite)->draw();//‚±‚±‰ö‚µ‚¢
 		ite++;
 	}
 
@@ -127,7 +129,9 @@ void Screen::update( ){
 	}
 }
 
-bool Screen::touch( Mouse* mouse, bool botan ){
+bool Screen::touch( Mouse* mouse, bool botan ) {
+	int i_x;
+	int i_y;
 	if( botan && touchScreen( mouse, botan ) ) {
 		std::list<TouchPoint*>::iterator ite = _touch_point_list.begin( );
 		int length = _touch_point_list.size( );
@@ -135,6 +139,10 @@ bool Screen::touch( Mouse* mouse, bool botan ){
 			if( (*ite)->touch( mouse->_x + _time           - _x , mouse->_y - _y, botan ) ||
 				(*ite)->touch( mouse->_x + _time + _x_size - _x , mouse->_y - _y, botan ) ||
 				(*ite)->touch( mouse->_x + _time - _x_size - _x , mouse->_y - _y, botan ) ) {
+				(*ite)->getPos( &i_x,  &i_y);
+				addScreenItem( new ScreenItem( _peke_g, 64, 64 ), i_x, i_y );
+				i_x += 1000;
+				i_y += 1000;
 				delete ( *ite );
 				_touch_point_list.remove( *ite );
 				return true;

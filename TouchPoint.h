@@ -16,9 +16,11 @@ public:
 	bool touch( Mouse* mouse, bool klic );
 	bool touch( int x, int y, bool klic );
 	void setPos(int x, int y);
+	void getPos(int* x, int *y);
 	void setScore( DataScore* score_data,int score );
 
 	bool ifBox( );
+	bool ifScore( );
 
 private:
 	void initThis( );

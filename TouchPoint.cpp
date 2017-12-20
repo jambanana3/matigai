@@ -50,6 +50,10 @@ void TouchPoint::setScore( DataScore* score_data, int score ) {
 	_score = score;
 }
 
+void TouchPoint::getPos(int* xP, int *yP) {
+	*xP = _x;
+	*yP = _y;
+}
 
 bool TouchPoint::touch( Mouse* mousePtr, bool klic ) {
 	if( _if_box ) {
@@ -102,5 +106,8 @@ void TouchPoint::touchAction( ) {
 
 bool TouchPoint::ifBox( ) {
 	return _if_box;
+}
+bool TouchPoint::ifScore() {
+	return _if_score;
 }
 

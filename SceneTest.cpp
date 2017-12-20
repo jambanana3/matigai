@@ -23,7 +23,7 @@ void SceneTest::run( ) {
 	Screen* screen( new Screen( scr_g, 50, 150, 500, 300, 900 ) );
 
 	screen->addTouchPoint( new TouchPoint( 20 ), 20, 20 );
-	screen->addScreenItem(new ScreenItem(peke_g, 64, 64), 32, 32);
+	//screen->addScreenItem(new ScreenItem(peke_g, 64, 64), 32, 32);
 
 	while ( true ) {//  ---------@‚±‚êƒƒCƒ“ƒ‹[ƒv@||||EE
 		mousePtr->update( );
@@ -34,7 +34,7 @@ void SceneTest::run( ) {
 		screen->update( );
 		screen->drawAndItem( );
 		if( screen->touch( mousePtr, mousePtr->left_in( ) ) ) {
-			break;
+			
 		}
 
 
