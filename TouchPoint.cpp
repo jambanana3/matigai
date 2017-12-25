@@ -48,6 +48,7 @@ void TouchPoint::setPos( int x, int y ) {
 void TouchPoint::setScore( DataScore* score_data, int score ) {
 	_score_data = score_data;
 	_score = score;
+	_if_score = true;
 }
 
 void TouchPoint::getPos(int* xP, int *yP) {

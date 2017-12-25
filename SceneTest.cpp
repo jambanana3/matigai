@@ -13,7 +13,7 @@ SceneTest::~SceneTest( ) {
 
 void SceneTest::run( ) {
 	
-	int scr_g = LoadGraph( "Ahaikei.png" );
+	int scr_g = LoadGraph( "gazo/Ahaikei.png" );
 	bool aaaa = 0;
 	int peke_g = LoadGraph( "gazo/64peke.png" );
 

@@ -2,6 +2,7 @@
 #include "Scene.h"
 #include "SceneStart.h"
 #include "SceneTest.h"
+#include "SceneGameMo.h"
 
 
 int WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int ) {
@@ -10,7 +11,7 @@ int WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int ) {
 	DxLib_Init();
 	SetDrawScreen( DX_SCREEN_BACK );
 
-	Scene* scene( new SceneTest() );
+	Scene* scene( new SceneGameMo() );
 	do {
 
 		scene->run( );
@@ -24,7 +25,7 @@ int WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int ) {
 
 
 
-	DxLib_End();
+	DxLib_End( );
 
 }
 
