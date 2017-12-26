@@ -11,7 +11,7 @@ int WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int ) {
 	DxLib_Init();
 	SetDrawScreen( DX_SCREEN_BACK );
 
-	Scene* scene( new SceneGameMo( ) );
+	Scene* scene( new SceneStart( ) );
 	do {
 
 		scene->run( );

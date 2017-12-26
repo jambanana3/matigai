@@ -6,6 +6,7 @@ public:
 	virtual ~SceneGameMo2( );
 public:
 	void run( );
-
+private:
+	void drawItem(int x, int y, int g_h);
 };
 

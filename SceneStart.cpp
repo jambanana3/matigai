@@ -1,4 +1,6 @@
 #include "SceneStart.h"
+#include "SceneStageSelect.h"
+
 #include "Mouse.h"
 #include "Screen.h"
 
@@ -15,7 +17,7 @@ SceneStart::~SceneStart( ) {
 
 void SceneStart::run( ) {
 
-	int haikei = LoadGraph( "gazou/matigai.png" );
+	int haikei = LoadGraph( "gazou/haikei.png" );
 	int start = LoadGraph( "gazou/スタート.png" );
 	int end = LoadGraph( "gazou/おわり.png" );
 
@@ -40,12 +42,9 @@ void SceneStart::run( ) {
 
 		Buttan_End->draw( );
 
-		
-		if (Buttan_End->touch( mousePtr, mousePtr->left_in( ) )) {
-			break;
-		}
 
 		if (Buttan_Start->touch(mousePtr, mousePtr->left_in( ) ) ) {
+			setNext( new SceneStageSelect( ) );
 			break;
 		}
 

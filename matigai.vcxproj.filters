@@ -52,8 +52,12 @@
     <ClCompile Include="DataScore.cpp">
       <Filter>データ関連</Filter>
     </ClCompile>
-    <ClCompile Include="SceneGameMo2.cpp" />
-    <ClCompile Include="SceneRisult.cpp" />
+    <ClCompile Include="SceneGameMo2.cpp">
+      <Filter>ここいじって</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneRisult.cpp">
+      <Filter>ここいじって</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene.h" />

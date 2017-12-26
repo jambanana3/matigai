@@ -13,7 +13,7 @@ _x_size( x_size ),
 _speed( speed ) {
 	_time = 0;
 	_y_add = 0;
-	_peke_g = LoadGraph( "gazo/64peke.png" );
+	_peke_g = LoadGraph( "gazou/64peke.png" );
 }
 
 Screen::~Screen( ) {
