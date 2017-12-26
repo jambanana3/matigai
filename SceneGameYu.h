@@ -8,5 +8,6 @@ public:
 
 public:
 	void run( );
+	void drawItem(int x, int y, int g_h);
 };
 
