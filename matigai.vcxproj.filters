@@ -52,6 +52,8 @@
     <ClCompile Include="DataScore.cpp">
       <Filter>データ関連</Filter>
     </ClCompile>
+    <ClCompile Include="SceneGameMo2.cpp" />
+    <ClCompile Include="SceneRisult.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene.h" />
@@ -86,6 +88,8 @@
     <ClInclude Include="DataScore.h">
       <Filter>データ関連</Filter>
     </ClInclude>
+    <ClInclude Include="SceneGameMo2.h" />
+    <ClInclude Include="SceneRisult.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="シーン内部">

@@ -1,24 +1,21 @@
-#include "SceneGameMo.h"
+#include "SceneGameMo2.h"
 #include "Mouse.h"
 #include "Screen.h"
+#include "ScreenItem.h"
 #include "TouchPoint.h"
-#include "DataScore.h"
 
-//--- âÊëúñ≥ÇµÅB
 
-void drawItem(int x, int y, int g_h);
 
-SceneGameMo::SceneGameMo( ) {
+SceneGameMo2::SceneGameMo2( ) {
 	setNext( nullptr );
 }
 
-
-SceneGameMo::~SceneGameMo( ) {
+SceneGameMo2::~SceneGameMo2( ) {
 }
 
-//\------ Ç¢Ç∂ÇÈÇÃÇ±Ç±Ç©ÇÁâ∫ (   void Scene,,,::run( ) ÇÃÇ»Ç©  ) ---------//
 
-void SceneGameMo::run() {
+
+void SceneGameMo2::run() {
 	DataScore* scorePtr(new DataScore( ) );
 
 	Mouse* mousePtr(new Mouse());
@@ -80,3 +77,4 @@ void drawItem(int x, int y, int g_h) {
 
 
 }
+
